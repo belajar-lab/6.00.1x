@@ -141,7 +141,7 @@ def updateHand(hand, word):
     hand: dictionary (string -> int)    
     returns: dictionary (string -> int)
     """
-    # TO DO ... <-- Remove this comment when you code this function
+    return {k: v-word.count(k) for k, v in hand.items()}
 
 
 

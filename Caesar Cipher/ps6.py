@@ -245,3 +245,18 @@ print('Actual Output:', plaintext.get_message_text_encrypted())
 ciphertext = CiphertextMessage('jgnnq')
 print('Expected Output:', (24, 'hello'))
 print('Actual Output:', ciphertext.decrypt_message())
+
+def decrypt_story():
+    """
+    Using the methods you created in this problem set,
+    decrypt the story given by the function get_story_string().
+    Use the functions get_story_string and loadWords to get the
+    raw data you need.
+
+    returns: string - story in plain text
+    """
+    story = get_story_string()
+    ciphertext = CiphertextMessage(story)
+    return ciphertext.decrypt_message()
+
+assert decrypt_story() == (16, 'Jack Florey is a mythical character created on the spur of a moment to help cover an insufficiently planned hack. He has been registered for classes at MIT twice before, but has reportedly never passed a class. It has been the tradition of the residents of East Campus to become Jack Florey for a few nights each year to educate incoming students in the ways, means, and ethics of hacking.')

@@ -107,7 +107,7 @@ Fill in the methods in the class `CiphertextMessage` according to the specificat
 - `__init__(self, text)`: Use the parent class constructor to make your code more concise.
 - `decrypt_message(self)`: You may find the helper function `is_word(wordlist, word)` and the string method [`split()`](https://docs.python.org/3/library/stdtypes.html#str.split) useful. Note that `is_word` will ignore punctuation and other special characters when considering whether a word is valid.
 
-> [!Hint]  
+>[!Hint]  
 > You may find the function `string.split` useful for dividing the text up into words.
 >
 > ```python

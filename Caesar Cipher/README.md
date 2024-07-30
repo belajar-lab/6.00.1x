@@ -27,12 +27,12 @@ Using the above key, we can quickly translate the message "happy" to "kdssb" (no
 
 >[!Note]
 > We are using the English alphabet for this problem—that is, the following letters in the following order:
-
-```python
->>> import string
->>> print string.ascii_lowercase
-abcdefghijklmnopqrstuvwxyz
-```
+>
+> ```python
+> >>> import string
+> >>> print string.ascii_lowercase
+> abcdefghijklmnopqrstuvwxyz
+> ```
 
 We will treat uppercase and lowercase letters individually, so that uppercase letters are always mapped to an uppercase letter, and lowercase letters are always mapped to a lowercase letter. If an uppercase letter maps to "A", then the same lowercase letter should map to "a". Punctuation and spaces should be retained and not changed. For example, a plaintext message with a comma should have a corresponding ciphertext with a comma in the same position.
 
@@ -60,7 +60,7 @@ The `Message` class contains methods that could be used to apply a cipher to a s
 
 In the next two questions, you will fill in the methods of the `Message` class found in *ps6.py* according to the specifications in the docstrings. The methods in the `Message` class already filled in are:
 
-- `init(self, text)`
+- `__init__(self, text)`
 - The getter method `get_message_text(self)`
 The getter method `get_valid_words(self)`, notice that this one returns a copy of `self.valid_words` to prevent someone from mutating the original list.
 
@@ -105,17 +105,17 @@ The problem, of course, is that you don’t know the shift. But our encryption m
 Fill in the methods in the class `CiphertextMessage` according to the specifications in *ps6.py*. The methods you should fill in are:
 
 - `__init__(self, text)`: Use the parent class constructor to make your code more concise.
-- `decrypt_message(self)`: You may find the helper function `is_word(wordlist, word)` and the string [method `split()`](https://docs.python.org/3/library/stdtypes.html#str.split) useful. Note that `is_word` will ignore punctuation and other special characters when considering whether a word is valid.
+- `decrypt_message(self)`: You may find the helper function `is_word(wordlist, word)` and the string method [`split()`](https://docs.python.org/3/library/stdtypes.html#str.split) useful. Note that `is_word` will ignore punctuation and other special characters when considering whether a word is valid.
 
 > [!Hints]  
 > You may find the function `string.split` useful for dividing the text up into words.
-    
-    ```python
-    >>> 'Hello world!'.split('o')
-    ['Hell', ' w', 'rld!']
-    >>> '6.00.1x is pretty fun'.split(' ')
-    ['6.00.1x', 'is', 'pretty', 'fun']
-    ```
+>
+> ```python
+> >>> 'Hello world!'.split('o')
+> ['Hell', ' w', 'rld!']
+> >>> '6.00.1x is pretty fun'.split(' ')
+> ['6.00.1x', 'is', 'pretty', 'fun']
+> ```
 
 
 ## Decrypt a Story

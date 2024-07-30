@@ -201,7 +201,7 @@ class CiphertextMessage(Message):
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words)
         '''
-        super.__init__(text)
+        super().__init__(text)
 
     def decrypt_message(self):
         '''
